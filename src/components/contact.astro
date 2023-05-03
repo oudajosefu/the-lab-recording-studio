@@ -1,0 +1,109 @@
+---
+import { Icon } from "astro-icon";
+---
+
+<section
+  class="contact-us flex scroll-mt-24 flex-col gap-4 px-8 py-16"
+  id="contact"
+>
+  <h2 class="gradient-text font-extrabold tracking-tight text-2xl md:text-5xl">
+    Contact us
+  </h2>
+  <p>
+    We're eager to hear about your latest project. Don't hesitate to reach out
+    and keep in touch! Follow us on social media to stay up-to-date on the
+    incredible projects we're a part of, and we hope to add yours to the list
+    soon!
+  </p>
+  <div class="mb-8 flex space-x-4">
+    <a
+      href="https://instagram.com/thelabrecordingaz"
+      target="_blank"
+      rel="noopener noreferrer"
+      aria-label="Instagram"
+    >
+      <Icon pack="mdi" name="instagram" class="h-8" />
+    </a>
+    <a
+      href="https://facebook.com/thelabrecordingaz"
+      target="_blank"
+      rel="noopener noreferrer"
+      aria-label="Facebook"
+    >
+      <Icon pack="mdi" name="facebook" class="h-8" />
+    </a>
+    <a
+      href="https://twitter.com/thelabrecordingaz"
+      target="_blank"
+      rel="noopener noreferrer"
+      aria-label="Twitter"
+    >
+      <Icon pack="mdi" name="twitter" class="h-8" />
+    </a>
+  </div>
+  <form class="space-y-4" data-netlify="true">
+    <label class="block">
+      <span class="font-bold">Name *</span>
+      <div class="mt-2 grid grid-cols-2 gap-4">
+        <div class="flex flex-col gap-2">
+          <input
+            class="peer rounded border border-gray-300 p-2 required:invalid:border-red-500 required:invalid:ring-2 required:invalid:ring-red-500 focus:border-blue-500 focus:outline-none focus:ring-2 focus:ring-blue-500 dark:bg-blue-300 dark:bg-opacity-10"
+            type="text"
+            placeholder="First Name"
+            title=""
+            pattern=".{2,}"
+            required=""
+          />
+          <p class="invisible mt-1 text-red-500 text-sm peer-invalid:visible">
+            Please provide your first name.
+          </p>
+        </div>
+        <div class="flex flex-col gap-2">
+          <input
+            class="peer rounded border border-gray-300 p-2 required:invalid:border-red-500 required:invalid:ring-2 required:invalid:ring-red-500 focus:border-blue-500 focus:outline-none focus:ring-2 focus:ring-blue-500 dark:bg-blue-300 dark:bg-opacity-10"
+            type="text"
+            placeholder="Last Name"
+            title=""
+            pattern=".{2,}"
+            required=""
+          />
+          <p class="invisible mt-1 text-red-500 text-sm peer-invalid:visible">
+            Please provide your last name.
+          </p>
+        </div>
+      </div>
+    </label>
+    <label class="block">
+      <span class="font-bold">Email *</span>
+      <input
+        class="peer mt-2 w-full rounded border border-gray-300 p-2 required:invalid:border-red-500 required:invalid:ring-2 required:invalid:ring-red-500 focus:border-blue-500 focus:outline-none focus:ring-2 focus:ring-blue-500 dark:bg-blue-300 dark:bg-opacity-10"
+        type="email"
+        placeholder="Email"
+        title=""
+        pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$"
+        required=""
+      />
+      <p class="invisible mt-1 text-red-500 text-sm peer-invalid:visible">
+        Please provide a valid email address.
+      </p>
+    </label>
+    <label class="block">
+      <span class="font-bold">Message *</span>
+      <textarea
+        class="peer mt-2 w-full rounded border border-gray-300 p-2 required:invalid:border-red-500 required:invalid:ring-2 required:invalid:ring-red-500 focus:border-blue-500 focus:outline-none focus:ring-2 focus:ring-blue-500 dark:bg-blue-300 dark:bg-opacity-10"
+        rows="4"
+        placeholder="Message"
+        title=""
+        required=""></textarea>
+      <p class="invisible mt-1 text-red-500 text-sm peer-invalid:visible">
+        Please provide a message.
+      </p>
+    </label>
+    <button
+      class="rounded bg-blue-500 px-4 py-2 font-bold text-white"
+      type="submit"
+    >
+      Submit
+    </button>
+  </form>
+</section>

@@ -1,0 +1,53 @@
+---
+import { Icon } from "astro-icon";
+import ContentSection from "~/components/content-section.astro";
+import controlsImage from "~/assets/leo-wieling-unsplash.jpg";
+import { Accordion, AccordionItem } from "accessible-astro-components";
+---
+
+<ContentSection title="Studio" id="studio" image={controlsImage}>
+  <Icon slot="icon" pack="mdi" name="clipboard-list-outline" class="h-16" />
+  <Fragment slot="lead">
+    Welcome to our <span class="text-primary">state-of-the-art</span> recording studio.
+    We've equipped our space with everything you need to create your best work yet.
+    From <span class="text-primary">top-of-the-line</span>
+    equipment to <span class="text-primary">experienced professionals</span>,
+    our studio is designed to help you achieve your musical vision.
+    <br />
+    <br />
+    Here are just a few of the things you can expect when you record with us:
+  </Fragment>
+  <Accordion>
+    <AccordionItem header="Professional Audio Mixing and Mastering Tools">
+      <p>
+        To capture the perfect sound for any instrument or vocal, a high-quality
+        recording studio will have a selection of top-of-the-line microphones.
+        From dynamic to condenser to ribbon, our studio has a microphone for
+        every situation.
+      </p>
+    </AccordionItem>
+    <AccordionItem header="Acoustic Treatment">
+      <p>
+        Proper acoustic treatment can make a significant difference in the sound
+        quality of a recording. Our studio has been acoustically designed to
+        minimize unwanted reflections and ensure an accurate listening
+        experience.
+      </p>
+    </AccordionItem>
+    <AccordionItem header="Experienced Audio Engineers and Producers">
+      <p>
+        A high-quality recording studio should have a team of experienced
+        professionals who can guide you through the recording process and help
+        you achieve your vision. Our team of engineers and producers are here to
+        help you make your music the best it can be.
+      </p>
+    </AccordionItem>
+    <AccordionItem header="Comfortable and Inviting Environment">
+      <p>
+        Recording can be a long and sometimes stressful process. That's why our
+        studio has been designed with comfort and relaxation in mind. We want
+        you to feel at home here so you can focus on making great music.
+      </p>
+    </AccordionItem>
+  </Accordion>
+</ContentSection>
