@@ -7,10 +7,10 @@ import Header from "~/components/header.astro";
 import Intro from "~/components/intro.astro";
 import Schedule from "~/components/schedule.astro";
 import Splash from "~/components/splash.astro";
+import theLabImage from "~/assets/the-lab.png";
 import "~/styles/index.css";
 
-const { generator, site } = Astro;
-const image = new URL("social.jpg", site);
+const url = "www.thelabrecordingaz.com";
 const description =
   "The Lab Recording Studio: where innovation meets creativity. Our state-of-the-art facility and experienced team are here to bring your musical vision to life.";
 ---
@@ -21,17 +21,16 @@ const description =
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width" />
     <link rel="icon" href="/the-lab-logo.svg" type="image/svg+xml" />
-    <meta name="generator" content={generator} />
 
     <title>The Lab</title>
     <meta name="description" content={description} />
 
     <!-- social media -->
-    <meta property="og:title" content="Astro" />
+    <meta property="og:title" content="The Lab" />
     <meta property="og:type" content="website" />
     <meta property="og:description" content={description} />
-    <meta property="og:image" content={image} />
-    <meta property="og:url" content={site} />
+    <meta property="og:image" content={theLabImage.src} />
+    <meta property="og:url" content={url} />
     <meta name="twitter:card" content="summary_large_image" />
 
     <!-- initialize theme -->
