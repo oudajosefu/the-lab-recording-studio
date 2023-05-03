@@ -1,10 +1,8 @@
 ---
-import { Picture } from "@astrojs/image/components";
-import theLabLogo from "~/assets/the-lab-logo.png";
-import theLabLogoDark from "~/assets/the-lab-logo-dark.png";
 import { Icon } from "astro-icon";
 import ThemeSwitcher from "~/components/theme-switcher.astro";
 import type { NavItem } from "~/types";
+import { Modal } from "accessible-astro-components";
 
 const navItems: Array<NavItem> = [
   { title: "About", url: "#about" },
@@ -67,7 +65,7 @@ const sizes = "(min-width: 640px) 42vw, 67vw";
             </button>
           </header>
           <div class="flex justify-center">
-            <Icon name="logomark" class="h-16" />
+            <Icon name="the-lab-logo" class="h-16" />
           </div>
           <nav>
             <ul class="flex flex-col">
@@ -144,8 +142,11 @@ const sizes = "(min-width: 640px) 42vw, 67vw";
     @apply fixed bottom-auto top-0;
     @apply border-default bg-default text-default;
   }
+  .modal {
+    @apply z-50;
+  }
   .modal.is-open {
-    @apply block;
+    @apply visible block;
   }
   .logo-transition {
     opacity: 0;
