@@ -41,66 +41,70 @@ import { Icon } from "astro-icon";
       <Icon pack="mdi" name="twitter" class="h-8" />
     </a>
   </div>
-  <form class="space-y-4" data-netlify="true">
+  <form class="group space-y-4" novalidate data-netlify="true">
     <label class="block">
       <span class="font-bold">Name *</span>
       <div class="mt-2 grid grid-cols-2 gap-4">
         <div class="flex flex-col gap-2">
           <input
-            class="peer rounded border border-gray-300 p-2 required:invalid:border-red-500 required:invalid:ring-2 required:invalid:ring-red-500 focus:border-blue-500 focus:outline-none focus:ring-2 focus:ring-blue-500 dark:bg-blue-300 dark:bg-opacity-10"
+            class="peer rounded border border-gray-300 p-2 focus:border-blue-500 focus:outline-none focus:ring-2 focus:ring-blue-500 dark:bg-blue-300 dark:bg-opacity-10 required:[&:not(:placeholder-shown):invalid]:border-red-500 required:[&:not(:placeholder-shown):invalid]:ring-2 required:[&:not(:placeholder-shown):invalid]:ring-red-500"
             type="text"
             placeholder="First Name"
-            title=""
             pattern=".{2,}"
-            required=""
+            required
           />
-          <p class="invisible mt-1 text-red-500 text-sm peer-invalid:visible">
+          <span
+            class="mt-2 hidden text-red-500 text-sm peer-[&:not(:placeholder-shown):invalid]:block"
+          >
             Please provide your first name.
-          </p>
+          </span>
         </div>
         <div class="flex flex-col gap-2">
           <input
-            class="peer rounded border border-gray-300 p-2 required:invalid:border-red-500 required:invalid:ring-2 required:invalid:ring-red-500 focus:border-blue-500 focus:outline-none focus:ring-2 focus:ring-blue-500 dark:bg-blue-300 dark:bg-opacity-10"
+            class="peer rounded border border-gray-300 p-2 focus:border-blue-500 focus:outline-none focus:ring-2 focus:ring-blue-500 dark:bg-blue-300 dark:bg-opacity-10 required:[&:not(:placeholder-shown):invalid]:border-red-500 required:[&:not(:placeholder-shown):invalid]:ring-2 required:[&:not(:placeholder-shown):invalid]:ring-red-500"
             type="text"
             placeholder="Last Name"
-            title=""
             pattern=".{2,}"
-            required=""
+            required
           />
-          <p class="invisible mt-1 text-red-500 text-sm peer-invalid:visible">
+          <span
+            class="mt-2 hidden text-red-500 text-sm peer-[&:not(:placeholder-shown):invalid]:block"
+          >
             Please provide your last name.
-          </p>
+          </span>
         </div>
       </div>
     </label>
     <label class="block">
       <span class="font-bold">Email *</span>
       <input
-        class="peer mt-2 w-full rounded border border-gray-300 p-2 required:invalid:border-red-500 required:invalid:ring-2 required:invalid:ring-red-500 focus:border-blue-500 focus:outline-none focus:ring-2 focus:ring-blue-500 dark:bg-blue-300 dark:bg-opacity-10"
+        class="peer mt-2 w-full rounded border border-gray-300 p-2 focus:border-blue-500 focus:outline-none focus:ring-2 focus:ring-blue-500 dark:bg-blue-300 dark:bg-opacity-10 required:[&:not(:placeholder-shown):invalid]:border-red-500 required:[&:not(:placeholder-shown):invalid]:ring-2 required:[&:not(:placeholder-shown):invalid]:ring-red-500"
         type="email"
         placeholder="Email"
-        title=""
         pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$"
-        required=""
+        required
       />
-      <p class="invisible mt-1 text-red-500 text-sm peer-invalid:visible">
+      <span
+        class="mt-2 hidden text-red-500 text-sm peer-[&:not(:placeholder-shown):invalid]:block"
+      >
         Please provide a valid email address.
-      </p>
+      </span>
     </label>
     <label class="block">
       <span class="font-bold">Message *</span>
       <textarea
-        class="peer mt-2 w-full rounded border border-gray-300 p-2 required:invalid:border-red-500 required:invalid:ring-2 required:invalid:ring-red-500 focus:border-blue-500 focus:outline-none focus:ring-2 focus:ring-blue-500 dark:bg-blue-300 dark:bg-opacity-10"
+        class="peer mt-2 w-full rounded border border-gray-300 p-2 focus:border-blue-500 focus:outline-none focus:ring-2 focus:ring-blue-500 dark:bg-blue-300 dark:bg-opacity-10 required:[&:not(:placeholder-shown):invalid]:border-red-500 required:[&:not(:placeholder-shown):invalid]:ring-2 required:[&:not(:placeholder-shown):invalid]:ring-red-500"
         rows="4"
         placeholder="Message"
-        title=""
-        required=""></textarea>
-      <p class="invisible mt-1 text-red-500 text-sm peer-invalid:visible">
+        required></textarea>
+      <span
+        class="mt-2 hidden text-red-500 text-sm peer-[&:not(:placeholder-shown):invalid]:block"
+      >
         Please provide a message.
-      </p>
+      </span>
     </label>
     <button
-      class="rounded bg-blue-500 px-4 py-2 font-bold text-white"
+      class="rounded bg-blue-500 px-4 py-2 font-bold text-white group-invalid:pointer-events-none group-invalid:opacity-30"
       type="submit"
     >
       Submit

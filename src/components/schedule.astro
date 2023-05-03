@@ -1,8 +1,19 @@
 ---
 import ContentSection from "~/components/content-section.astro";
 import wideControlsImage from "~/assets/james-kovin-unsplash.jpg";
+import { Icon } from "astro-icon";
 ---
 
-<ContentSection title="Schedule now" id="schedule" image={wideControlsImage}>
+<ContentSection
+  title="Schedule now"
+  id="schedule"
+  image={wideControlsImage}
+  reverse={true}
+>
   <Fragment slot="lead">Get started on your next project today.</Fragment>
+  <jammed-bookings
+    intro-text="Please pick a day"
+    account="the-lab-recording-studio-llc"></jammed-bookings>
 </ContentSection>
+
+<script src="https://mini.jammedapp.com/jammed-bookings.min.js"></script>
