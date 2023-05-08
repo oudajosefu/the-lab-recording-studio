@@ -18,7 +18,7 @@ const { title, id, image, reverse = false } = Astro.props;
   }`}
 >
   <div
-    class="flex min-h-[1/2] w-full flex-col items-center justify-center gap-4 px-8 py-16 md:w-1/2"
+    class="flex w-full flex-col items-center justify-center gap-4 px-8 py-16 md:w-1/2"
   >
     <div class="flex flex-col items-center gap-4">
       <slot name="eyebrow" />
@@ -31,7 +31,7 @@ const { title, id, image, reverse = false } = Astro.props;
         <slot name="icon" />
       </div>
     </div>
-    <p class="max-w-2xl text-center font-extrabold text-xs md:text-sm">
+    <p class="max-w-2xl text-center font-medium">
       <slot name="lead" />
     </p>
     <slot />
